@@ -16,7 +16,13 @@ async function playIntro() {
 
   // Copies of the labels, placed exactly where the real ones are
   const clones = targets.map((el) => {
-    const r = el.getBoundingClientRect();
+    // Measure the text itself: on mobile the links are full-width blocks,
+    // and their box width would push the centred row off the screen.
+    const range = document.createRange();
+    range.selectNodeContents(el);
+    const tr = range.getBoundingClientRect();
+    const box = el.getBoundingClientRect();
+    const r = { left: box.left, top: box.top, width: tr.width || box.width, height: box.height };
     const c = el.cloneNode(true);
     c.removeAttribute('id');
     c.removeAttribute('data-intro');

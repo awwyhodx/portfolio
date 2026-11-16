@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Katsiaryna Isachanka — Graphic Designer</title>
+  <meta name="description" content="Graphic designer focused on brand systems and presentation design.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fallback font while Monument Grotesk Mono is not installed (see fonts/README.md) -->
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!-- Public Sans: the Linklaters brand typeface, used only inside the case-study frames -->
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Hide the page until the intro animation runs (skipped for reduced motion).
+    // Safety: show the page anyway after 7s if something goes wrong.
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('intro', 'intro-heads');
+      setTimeout(() => document.documentElement.classList.remove('intro', 'intro-heads'), 7000);
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- Vertical hairlines around the middle column (do not scroll) -->
+  <div class="rule rule--left" aria-hidden="true"></div>
+  <div class="rule rule--right" aria-hidden="true"></div>
+
+  <div class="layout">
+
+    <!-- ============ LEFT: profile ============ -->
+    <aside class="col col--left">
+      <hr>
+      <div class="head">
+        <a href="#" id="top" data-intro>Katsiaryna Isachanka</a>
+      </div>
+      <hr>
+
+      <p>
+        PROFILE<br>
+      <p></p>
+      <a href="https://www.linkedin.com/in/kisax" target="_blank" rel="noopener">LinkedIn</a><br>
+      <a href="https://www.instagram.com/awwyhod/" target="_blank" rel="noopener">Instagram</a>
+      </p>
+
+      <p>
+        I’m a graphic designer focused on brand systems and presentation design, with four years in-house at Linklaters,
+        a global law firm. I’ve embedded its refreshed identity across the business and produce its client
+        presentations, reports and campaigns, working daily in PowerPoint, InDesign, Illustrator and Figma.
+      </p>
+
+      <p>
+        Off the clock, you can find me buying flowers (I love making flower arrangements) or planning a new
+        adventure.
+      </p>
+
+      <nav class="nav">
+        <a class="mobile-only" href="#work" data-intro-mobile>PROJECTS</a>
+        <a class="mobile-only" href="#cv" data-intro-mobile>CV</a>
+        <a href="mailto:katsiaryna.isachanka@gmail.com">CONTACT</a>
+      </nav>
+
+      <time class="clock" aria-label="Local time"></time>
+    </aside>
+
+    <!-- ============ MIDDLE: projects ============ -->
+    <main class="col col--mid" id="work">
+
+      <!-- ---------- Project list ---------- -->
+      <div class="project-list">
+        <hr>
+        <div class="head"><span data-intro>PROJECTS</span></div>
+
+        <!-- Project 1 -->
+        <article class="project" id="linklaters-unrvld">
+          <hr>
+          <figure class="media">
+            <img src="images/linklaters-unrvld/cover2.webp" alt="Linklaters × UNRVLD, Visual Identity, 2025" width="2000" height="1125">
+          </figure>
+          <div class="project__info">
+            <div class="project__title">
+              <span class="project__num">1.</span>
+              <span>Linklaters × UNRVLD</span>
+            </div>
+            <div>
+              <i>Visual Identity</i>, with UNRVLD<br>
+              Linklaters<br>
+              In-house brand advocate and rollout lead<br>
+              <br>
+              UNRVLD led the refresh of the Linklaters visual identity, rebuilding the colour and type system across the
+              website. I sat on the in-house creative team as the brand’s advocate, then rolled the new system out
+              across the firm’s production work.<br>
+              <br>
+              <a href="#/linklaters-unrvld">[More..]</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project" id="with-you">
+          <hr>
+          <figure class="media">
+            <img src="images/with-you/list-cover.webp" alt="With You, Event Campaign, 2026" width="2000" height="1125">
+          </figure>
+          <div class="project__info">
+            <div class="project__title">
+              <span class="project__num">2.</span>
+              <span>With You</span>
+            </div>
+            <div>
+              <i>(Event Campaign)</i><br>
+              Linklaters<br>
+              2026<br>
+              <br>
+              Visual system for Linklaters’ FIFA World Cup Quarterfinal watch party at Nasdaq, New York: 46 assets
+              across screens, the photo wall and social.<br>
+              <br>
+              <a href="#/with-you">[More..]</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project" id="sydoria">
+          <hr>
+          <figure class="media">
+            <img src="images/sydoria/list-cover.webp" alt="Sydoria, E-commerce Website, 2023" width="2000" height="1125">
+          </figure>
+          <div class="project__info">
+            <div class="project__title">
+              <span class="project__num">3.</span>
+              <span>Sydoria</span>
+            </div>
+            <div>
+              <i>(E-commerce Website, UX/UI)</i><br>
+              Concept<br>
+              2023<br>
+              <br>
+              Website concept for an emerging sculptural jewellery brand: atmosphere first, with the shop always
+              close by.<br>
+              <br>
+              <a href="#/sydoria">[More..]</a>
+            </div>
+          </div>
+        </article>
+
+        <hr>
+      </div>
+
+      <!-- ---------- Project pages ----------
+           Each page opens in place of the list when its [More..] link is clicked.
+           data-slug must match the link: href="#/<slug>"
+           In the gallery, add class="wide" to a figure to make it full width. -->
+
+      <!-- Page 1 -->
+      <article class="project-page" data-slug="linklaters-unrvld" data-title="Linklaters × UNRVLD" hidden>
+        <hr>
+        <div class="head head--row">
+          <span>Linklaters × UNRVLD<br><i>(Visual Identity)</i><br>2025</span>
+          <a class="muted" href="#">(Close)</a>
+        </div>
+
+        <hr>
+        <div class="pp-info">
+          <div class="muted">Description</div>
+          <div class="pp-text">
+            <p>UNRVLD led the core identity refresh. I designed and built the firm’s template system on it — 17
+              InDesign and self-service Word templates, the type and colour application, the imagery library, the
+              guidelines — so the refresh held up across 2,270+ live documents.</p>
+          </div>
+        </div>
+
+        <hr>
+        <div class="pp-info">
+          <div class="muted">My role</div>
+          <div class="pp-text">
+            <p>In-house brand advocate and rollout lead.</p>
+          </div>
+        </div>
+
+        <hr>
+        <div class="pp-info">
+          <div class="muted">The challenge</div>
+          <div class="pp-text">
+            <p>Make sure the agency’s system scales to everything Linklaters produces. A palette and type have to
+              carry a 40-page factsheet, a pitch deck and a press advert. Take the agreed identity into production. I
+              applied it across presentations, refreshed the internal template library, and I’m building the new brand
+              guidelines (in development, therefore not shown here).</p>
+          </div>
+        </div>
+
+        <!-- Imagery: landscape + portrait, both switch by themselves -->
+        <div class="tiles">
+          <!-- Landscape imagery: switches by itself -->
+          <figure class="tile span-2 slideshow slideshow--wide" data-slideshow aria-label="Imagery direction, landscape">
+            <img class="slide zoomable" src="images/linklaters-unrvld/photos/md/h-turbine-clouds.webp" data-full="images/linklaters-unrvld/photos/h-turbine-clouds.webp" alt="Wind turbine above clouds" loading="lazy">
+            <img class="slide zoomable" data-src="images/linklaters-unrvld/photos/md/h-water.webp" data-full="images/linklaters-unrvld/photos/h-water.webp" alt="Rushing water, motion blur" loading="lazy">
+            <img class="slide zoomable" data-src="images/linklaters-unrvld/photos/md/h-wing.webp" data-full="images/linklaters-unrvld/photos/h-wing.webp" alt="Aeroplane wing at sunrise" loading="lazy">
+          </figure>
+          <!-- Portrait imagery: switches by itself -->
+          <figure class="tile span-1 slideshow slideshow--portrait" data-slideshow aria-label="Imagery direction">
+            <img class="slide zoomable" src="images/linklaters-unrvld/photos/md/v-tower.webp" data-full="images/linklaters-unrvld/photos/v-tower.webp" alt="Glass tower against a purple sky" loading="lazy">
+            <img class="slide zoomable" data-src="images/linklaters-unrvld/photos/md/v-office-dusk.webp" data-full="images/linklaters-unrvld/photos/v-office-dusk.webp" alt="Office building at dusk" loading="lazy">
+            <img class="slide zoomable" data-src="images/linklaters-unrvld/photos/md/v-motorway.webp" data-full="images/linklaters-unrvld/photos/v-motorway.webp" alt="Car lights on a motorway at night" loading="lazy">
+            <img class="slide zoomable" data-src="images/linklaters-unrvld/photos/md/v-mountain.webp" data-full="images/linklaters-unrvld/photos/v-mountain.webp" alt="Aeroplane above a mountain" loading="lazy">
+            <img class="slide zoomable" data-src="images/linklaters-unrvld/photos/md/v-wooden-bridge.webp" data-full="images/linklaters-unrvld/photos/v-wooden-bridge.webp" alt="Wooden bridge over a lake" loading="lazy">
+            <img class="slide zoomable" data-src="images/linklaters-unrvld/photos/md/v-walkway.webp" data-full="images/linklaters-unrvld/photos/v-walkway.webp" alt="Person walking on a bridge over water" loading="lazy">
+            <img class="slide zoomable" data-src="images/linklaters-unrvld/photos/md/v-bridge-arc.webp" data-full="images/linklaters-unrvld/photos/v-bridge-arc.webp" alt="Bridge arc" loading="lazy">
+          </figure>
+        </div>
+        <div class="pp-info pp-caption">
+          <div class="muted">Imagery</div>
+          <div class="pp-text">
+            <p>A new visual library of images for use across Linklaters.</p>
+          </div>
+        </div>
+
+        <!-- Colours -->
+        <div class="tiles">
+          <figure class="frame frame--swatches tile span-3" data-reveal aria-label="Primary colours">
+            <div class="swatches-primary">
+              <div class="sw" style="--c:#000000; --t:#fff; --i:0; grid-area: black">Black 30%<small>#000000</small></div>
+              <div class="sw" style="--c:#ffffff; --t:#111; --i:1; grid-area: white">White 40%<small>#FFFFFF</small></div>
+              <div class="sw" style="--c:#af005f; --t:#fff; --i:2; grid-area: magenta">Magenta 20%<small>#AF005F</small></div>
+              <div class="sw" style="--c:#35002e; --t:#fff; --i:3; grid-area: plum">Plum 2%<small>#35002E</small></div>
+              <div class="sw" style="--c:#f1f1f1; --t:#111; --i:4; grid-area: parchment">Parchment 3%<small>#F1F1F1</small></div>
+            </div>
+          </figure>
+
+        </div>
+
+        <hr>
+        <div class="pp-info">
+          <div class="muted">Design principles</div>
+          <div class="pp-text">
+            <p>Most law firms look alike because the client experience is rarely given real attention — which leaves a
+              space to capture. The approach here is to slow down and weigh every decision: an experience that feels
+              considered, content that engages, less on the page each time, and more white space to breathe.</p>
+          </div>
+        </div>
+
+        <!-- Typography -->
+        <div class="tiles">
+          <figure class="frame frame--dark type-weights tile span-3" data-reveal aria-label="Public Sans weights">
+            <div class="type-head">Public Sans<br>Modern Global Typeface</div>
+            <ul class="type-weights__list">
+              <li class="rv" style="--i:0; font-weight: 100">Thin</li>
+              <li class="rv" style="--i:1; font-weight: 200">Extra Light</li>
+              <li class="rv" style="--i:2; font-weight: 300">Light</li>
+              <li class="rv" style="--i:3; font-weight: 400">Regular</li>
+              <li class="rv" style="--i:4; font-weight: 500">Medium</li>
+              <li class="rv" style="--i:5; font-weight: 900">Black</li>
+            </ul>
+            <div class="type-weights__sample">
+              <p class="tw-headline">Optimising Compliance for Automotive Industry Leaders</p>
+              <p class="tw-small">View appointment</p>
+              <p class="tw-body">We consistently act on the largest and most complex cross-border M&amp;A transactions,
+                including those with a strategic carve-out element.</p>
+              <p class="tw-small tw-name">Jessica Grove</p>
+            </div>
+            <span class="type-weights__num">01</span>
+          </figure>
+
+          <figure class="frame frame--dark type-glyphs tile span-2" data-reveal aria-label="Public Sans glyphs">
+            <div class="type-head">Public Sans<br>Modern Global Typeface</div>
+            <div class="type-glyphs__set rv" style="--i:0">abcdefghijklm<br>nopqrstuvwxyz<br>0123456789<br>?!@£$&amp;%</div>
+            <div class="type-glyphs__num"><span class="breathe">02</span></div>
+            <div class="type-glyphs__sample rv" style="--i:2">
+              <p class="tg-headline">Mergers &amp; Acquisitions</p>
+              <p class="tg-sub">Recent deals include advising:</p>
+              <p class="tg-body">The world’s leading private equity houses and financial sponsors regularly rely on
+                both our legal and commercial expertise to help them navigate complex, high-profile and cross-border
+                transactions.</p>
+            </div>
+          </figure>
+
+          <!-- Small square tile: the Linklaters logo animation on brand plum -->
+          <figure class="frame frame--logo tile span-1" aria-label="Linklaters logo animation on plum">
+            <video src="images/linklaters-unrvld/logo-motion.mp4?v=2" poster="images/linklaters-unrvld/logo-motion-poster.webp?v=2"
+              muted loop playsinline preload="none"></video>
+          </figure>
+
+        </div>
+
+        <!-- Mockups: posters + stationery, one row of equal height -->
+        <div class="mock-row">
+          <figure class="tile">
+            <img class="zoomable" src="images/linklaters-unrvld/mock-posters.webp" alt="Three Linklaters posters in a hallway" loading="lazy" width="1524" height="1032">
+          </figure>
+          <figure class="tile">
+            <img class="zoomable" src="images/linklaters-unrvld/mock-stationery.webp" alt="Linklaters business cards and folder" loading="lazy" width="1131" height="1391">
+          </figure>
+        </div>
+
+        <hr>
+        <div class="pp-info">
+          <div class="muted">Documents</div>
+          <div class="pp-text">
+            <p>Brochures, flyers, decks and adverts built on the new templates.</p>
+          </div>
+        </div>
+
+        <!-- Documents: the cover flips through the pages by itself;
+             click opens the document full screen (arrows / swipe / Esc).
+             Card images: docs/<name>/sm/NN.webp (light), full screen: docs/<name>/NN.webp.
+             Placeholders (.doc-ph) are waiting for the exported pages. -->
+        <div class="tiles">
+          <figure class="doc tile span-1" style="--ratio: 2480 / 3508" aria-label="Our Global Infrastructure Expertise brochure">
+            <div class="doc__stage" data-slideshow>
+              <img class="slide" src="images/linklaters-unrvld/docs/global-infra/sm/01.webp" data-full="images/linklaters-unrvld/docs/global-infra/01.webp" alt="Our Global Infrastructure Expertise, page 1" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/docs/global-infra/sm/02.webp" data-full="images/linklaters-unrvld/docs/global-infra/02.webp" alt="Our Global Infrastructure Expertise, page 2" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/docs/global-infra/sm/04.webp" data-full="images/linklaters-unrvld/docs/global-infra/04.webp" alt="Our Global Infrastructure Expertise, page 4" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/docs/global-infra/sm/08.webp" data-full="images/linklaters-unrvld/docs/global-infra/08.webp" alt="Our Global Infrastructure Expertise, page 8" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/docs/global-infra/sm/11.webp" data-full="images/linklaters-unrvld/docs/global-infra/11.webp" alt="Our Global Infrastructure Expertise, page 11" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/docs/global-infra/sm/12.webp" data-full="images/linklaters-unrvld/docs/global-infra/12.webp" alt="Our Global Infrastructure Expertise, page 12" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/docs/global-infra/sm/15.webp" data-full="images/linklaters-unrvld/docs/global-infra/15.webp" alt="Our Global Infrastructure Expertise, page 15" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/docs/global-infra/sm/17.webp" data-full="images/linklaters-unrvld/docs/global-infra/17.webp" alt="Our Global Infrastructure Expertise, page 17" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/docs/global-infra/sm/18.webp" data-full="images/linklaters-unrvld/docs/global-infra/18.webp" alt="Our Global Infrastructure Expertise, page 18" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/docs/global-infra/sm/20.webp" data-full="images/linklaters-unrvld/docs/global-infra/20.webp" alt="Our Global Infrastructure Expertise, page 20" loading="lazy">
+            </div>
+            <figcaption>Our Global Infrastructure Expertise<span class="muted">Brochure, selected pages</span></figcaption>
+          </figure>
+
+          <figure class="doc tile span-2" style="--ratio: 3508 / 2480" aria-label="Energy and Infrastructure in the Benelux brochure">
+            <div class="doc__stage" data-slideshow>
+              <img class="slide" src="images/linklaters-unrvld/docs/benelux-energy/sm/01.webp?v=2" data-full="images/linklaters-unrvld/docs/benelux-energy/01.webp?v=2" alt="Energy &amp; Infrastructure in the Benelux, page 1" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/docs/benelux-energy/sm/03.webp" data-full="images/linklaters-unrvld/docs/benelux-energy/03.webp" alt="Energy &amp; Infrastructure in the Benelux, page 3" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/docs/benelux-energy/sm/04.webp" data-full="images/linklaters-unrvld/docs/benelux-energy/04.webp" alt="Energy &amp; Infrastructure in the Benelux, page 4" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/docs/benelux-energy/sm/05.webp" data-full="images/linklaters-unrvld/docs/benelux-energy/05.webp" alt="Energy &amp; Infrastructure in the Benelux, page 5" loading="lazy">
+            </div>
+            <figcaption>Energy &amp; Infrastructure in the Benelux<span class="muted">Brochure, selected pages</span></figcaption>
+          </figure>
+
+          <figure class="doc tile span-3" style="--ratio: 16 / 9" aria-label="Private Capital deck">
+            <div class="doc__stage" data-slideshow>
+              <img class="slide" src="images/linklaters-unrvld/docs/private-capital/sm/01.webp" data-full="images/linklaters-unrvld/docs/private-capital/01.webp" alt="Private Capital deck, page 1" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/docs/private-capital/sm/02.webp" data-full="images/linklaters-unrvld/docs/private-capital/02.webp" alt="Private Capital deck, page 2" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/docs/private-capital/sm/03.webp" data-full="images/linklaters-unrvld/docs/private-capital/03.webp" alt="Private Capital deck, page 3" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/docs/private-capital/sm/05.webp" data-full="images/linklaters-unrvld/docs/private-capital/05.webp" alt="Private Capital deck, page 5" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/docs/private-capital/sm/06.webp" data-full="images/linklaters-unrvld/docs/private-capital/06.webp" alt="Private Capital deck, page 6" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/docs/private-capital/sm/07.webp" data-full="images/linklaters-unrvld/docs/private-capital/07.webp" alt="Private Capital deck, page 7" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/docs/private-capital/sm/09.webp" data-full="images/linklaters-unrvld/docs/private-capital/09.webp" alt="Private Capital deck, page 9" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/docs/private-capital/sm/10.webp" data-full="images/linklaters-unrvld/docs/private-capital/10.webp" alt="Private Capital deck, page 10" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/docs/private-capital/sm/11.webp" data-full="images/linklaters-unrvld/docs/private-capital/11.webp" alt="Private Capital deck, page 11" loading="lazy">
+            </div>
+            <figcaption>Private Capital<span class="muted">Deck, selected slides</span></figcaption>
+          </figure>
+
+          <figure class="doc tile span-1" style="--ratio: 2480 / 3508" aria-label="AI Intelligence and Knowledge Programme brochure">
+            <div class="doc__stage" data-slideshow>
+              <img class="slide" src="images/linklaters-unrvld/docs/ai-intelligence/sm/01.webp" data-full="images/linklaters-unrvld/docs/ai-intelligence/01.webp" alt="AI Intelligence and Knowledge Programme, page 1" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/docs/ai-intelligence/sm/02.webp" data-full="images/linklaters-unrvld/docs/ai-intelligence/02.webp" alt="AI Intelligence and Knowledge Programme, page 2" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/docs/ai-intelligence/sm/04.webp" data-full="images/linklaters-unrvld/docs/ai-intelligence/04.webp" alt="AI Intelligence and Knowledge Programme, page 4" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/docs/ai-intelligence/sm/05.webp" data-full="images/linklaters-unrvld/docs/ai-intelligence/05.webp" alt="AI Intelligence and Knowledge Programme, page 5" loading="lazy">
+            </div>
+            <figcaption>AI Intelligence and Knowledge Programme<span class="muted">Brochure, selected pages</span></figcaption>
+          </figure>
+
+          <figure class="doc tile span-2" style="--ratio: 16 / 9" aria-label="Press adverts">
+            <div class="doc__stage doc__stage--dark" data-slideshow>
+              <img class="slide" src="images/linklaters-unrvld/ad-lffm.webp" alt="LFFM 2027 press advert" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/ad-napaba-preview.webp" data-full="images/linklaters-unrvld/ad-napaba.webp" alt="NAPABA 2026 press advert" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/ad-dorot-1.webp" alt="DOROT Gala Journal advert" loading="lazy">
+              <img class="slide" data-src="images/linklaters-unrvld/ad-dorot-2.webp" alt="DOROT Gala Journal advert, alternative" loading="lazy">
+            </div>
+            <figcaption>Press adverts<span class="muted">LFFM, NAPABA, DOROT</span></figcaption>
+          </figure>
+        </div>
+
+        <hr>
+        <div class="pp-info">
+          <div class="muted">Design outcome</div>
+          <div>
+            <div class="outcome-rows" data-reveal>
+              <div class="outcome-row"><span class="outcome-num" data-count="17">17</span><span class="outcome-label">Templates built on the refreshed brand</span></div>
+              <div class="outcome-row"><span class="outcome-num" data-count="9">9</span><span class="outcome-label">BD teams</span></div>
+              <div class="outcome-row"><span class="outcome-num" data-count="4">4</span><span class="outcome-label">Sectors</span></div>
+              <div class="outcome-row"><span class="outcome-num" data-count="2270" data-suffix="+">2,270+</span><span class="outcome-label">Live documents</span></div>
+            </div>
+            <p class="outcome-note">PowerPoint and self-service Word versions available firm-wide.</p>
+          </div>
+        </div>
+
+        <!-- Overview mosaic (like Mouthwash's closing image): her crops from the Figma
+             frame "last page" (images/linklaters-unrvld/gallery/) mixed with photos.
+             Order = data-srcs, 6 per row.
+             To use a single exported image instead:
+             <figure class="tile span-3"><img src="images/linklaters-unrvld/mosaic.webp" alt="…"></figure> -->
+        <div class="tiles">
+          <figure class="mosaic-preview tile span-3" aria-label="Overview of the brand system">
+            <div class="mosaic-preview__grid" data-srcs="images/linklaters-unrvld/gallery/03-cover-plum.webp,images/linklaters-unrvld/thumbs/photos-v-office-dusk.webp,images/linklaters-unrvld/gallery/01-dorot-2.webp,images/linklaters-unrvld/thumbs/photos-h-water.webp,images/linklaters-unrvld/gallery/11-global-infra-cover.webp,images/linklaters-unrvld/thumbs/mosaic-gi-15.webp,images/linklaters-unrvld/thumbs/photos-v-walkway.webp,images/linklaters-unrvld/gallery/08-colours.webp,images/linklaters-unrvld/thumbs/photos-private-credit.webp,images/linklaters-unrvld/gallery/16-lffm.webp,images/linklaters-unrvld/thumbs/mosaic-gi-11.webp,images/linklaters-unrvld/gallery/05-tower.webp,images/linklaters-unrvld/gallery/12-private-capital-cover.webp,images/linklaters-unrvld/thumbs/photos-h-turbine-clouds.webp,images/linklaters-unrvld/gallery/14-global-infra-contents.webp,images/linklaters-unrvld/thumbs/mosaic-ai-05.webp,images/linklaters-unrvld/gallery/19-benelux-cover.webp,images/linklaters-unrvld/thumbs/photos-v-mountain.webp,images/linklaters-unrvld/thumbs/mosaic-gi-08.webp,images/linklaters-unrvld/gallery/09-dorot.webp,images/linklaters-unrvld/thumbs/mosaic-ai-02b.webp,images/linklaters-unrvld/gallery/02-turbine-fog.webp,images/linklaters-unrvld/thumbs/photos-v-bridge-arc.webp,images/linklaters-unrvld/gallery/17-private-capital-p8.webp,images/linklaters-unrvld/gallery/10-benelux-p5.webp,images/linklaters-unrvld/thumbs/mosaic-gi-18.webp,images/linklaters-unrvld/gallery/07-cover-sky.webp,images/linklaters-unrvld/thumbs/photos-v-wooden-bridge.webp,images/linklaters-unrvld/gallery/13-private-capital-p10.webp,images/linklaters-unrvld/thumbs/mosaic-ai-03b.webp,images/linklaters-unrvld/thumbs/photos-v-motorway.webp,images/linklaters-unrvld/gallery/15-johannesburg.webp,images/linklaters-unrvld/thumbs/mosaic-gi-12.webp,images/linklaters-unrvld/gallery/04-about-us.webp,images/linklaters-unrvld/thumbs/mosaic-ai-04b.webp,images/linklaters-unrvld/gallery/18-poppy.webp,images/linklaters-unrvld/thumbs/mosaic-gi-17.webp,images/linklaters-unrvld/gallery/06-light-trails.webp,images/linklaters-unrvld/thumbs/mosaic-ai-03a.webp,images/linklaters-unrvld/gallery/20-about-hero.webp,images/linklaters-unrvld/thumbs/mosaic-ai-04c.webp,images/linklaters-unrvld/thumbs/mosaic-ai-02a.webp"></div>
+          </figure>
+        </div>
+
+        <hr>
+      </article>
+
+      <!-- Page 2 -->
+      <article class="project-page" data-slug="with-you" data-title="With You" hidden>
+        <hr>
+        <div class="head head--row">
+          <span>With You<br><i>(Event Campaign)</i><br>2026</span>
+          <a class="muted" href="#">(Close)</a>
+        </div>
+
+        <hr>
+        <div class="pp-info">
+          <div class="muted">Description</div>
+          <div class="pp-text">
+            <p>Campaign for Linklaters’ FIFA World Cup Quarterfinal watch party at Nasdaq, New York. I designed the full
+              visual system (46 assets) for an event that supported a client programme bringing together 152 clients.
+              My job was to make a complex multi-surface Nasdaq venue feel like one premium, on-brand Linklaters
+              space, consistent across every screen, the photo wall and social.</p>
+          </div>
+        </div>
+
+        <hr>
+        <div class="pp-info">
+          <div class="muted">My role</div>
+          <div class="pp-text">
+            <p>Visual system and design of all 46 assets, across screens, the photo wall and social.</p>
+          </div>
+        </div>
+
+        <hr>
+        <div class="pp-info">
+          <div class="muted">The challenge</div>
+          <div class="pp-text">
+            <p>Support US transformational growth by turning World Cup attention into priority-client engagement in
+              New York. Make a complex, multi-surface Nasdaq venue feel like one premium Linklaters experience space.
+              Align an evolving direction across 46 assets, multiple stakeholders and a seven-week timeline.</p>
+          </div>
+        </div>
+
+        <!-- Hero: the holding screen -->
+        <div class="tiles">
+          <figure class="tile span-3">
+            <img class="zoomable" src="images/with-you/holding.webp" alt="Holding screen: With You, for the quarterfinals" width="1920" height="1080">
+          </figure>
+        </div>
+
+        <hr>
+        <div class="pp-info">
+          <div class="muted">Provided look &amp; feel</div>
+          <div>
+            <figure class="tile provided">
+              <img class="zoomable" src="images/with-you/provided.webp" alt="The look and feel provided in the brief: gold trophy on a green stadium" loading="lazy">
+            </figure>
+          </div>
+        </div>
+
+        <hr>
+        <div class="pp-info">
+          <div class="muted">Design direction</div>
+          <div class="pp-text">
+            <p>The whole system rests on four rules. “With You” stays on every surface. Magenta always sits next to
+              black-and-white photography. Oversized, bold typography extending beyond the edges of layouts to create a
+              strong sense of scale, confidence and ambition. High-contrast black-and-white sports photography to
+              capture the energy of the game without competing with the colour of the live match, with a focus on
+              dynamic, action-driven moments. And one sentence carries across several screens, so the venue reads as a
+              single line: with you, when it matters, in the U.S. and globally. The Linklaters visual identity stays
+              recognisable across every touchpoint.</p>
+          </div>
+        </div>
+
+        <!-- Two columns, as on the night: the screen video on the left,
+             black-and-white photography switching on the right -->
+        <div class="pair">
+          <figure class="tile video-tile pair__item" aria-label="Column screen video">
+            <video src="images/with-you/withyou-column.mp4" poster="images/with-you/withyou-column-poster.webp"
+              muted loop playsinline preload="none"></video>
+          </figure>
+          <figure class="tile slideshow slideshow--still pair__item pair__item--slides" data-slideshow aria-label="Black-and-white photography for the columns">
+            <img class="slide zoomable" src="images/with-you/col-photo-1.webp" alt="Goalkeeper reaching for the ball">
+            <img class="slide zoomable" data-src="images/with-you/col-photo-2.webp" alt="Player jumping">
+            <img class="slide zoomable" data-src="images/with-you/col-photo-3.webp" alt="Fans watching the match in the stadium">
+            <img class="slide zoomable" data-src="images/with-you/col-photo-4.webp" alt="Ball in the net">
+            <img class="slide zoomable" data-src="images/with-you/col-photo-5.webp" alt="The Americas at night from space">
+          </figure>
+        </div>
+
+        <!-- Nasdaq tower, Times Square -->
+        <div class="tiles">
+          <figure class="tile span-3">
+            <img class="zoomable" src="images/with-you/nasdaq-tower.webp" alt="With You on the Nasdaq tower, Times Square" loading="lazy" width="1264" height="848">
+          </figure>
+        </div>
+
+        <!-- Bar: five screens read as one line -->
+        <div class="bar-row" data-reveal aria-label="Bar screens: With You, in the U.S. and globally">
+          <img class="zoomable sw" style="--i:0" src="images/with-you/bar-clean-1.webp" alt="Bar screen 1" loading="lazy" width="702" height="1250">
+          <img class="zoomable sw" style="--i:1" src="images/with-you/bar-clean-2.webp" alt="Bar screen 2" loading="lazy" width="702" height="1250">
+          <img class="zoomable sw" style="--i:2" src="images/with-you/bar-clean-3.webp" alt="Bar screen 3" loading="lazy" width="702" height="1250">
+          <img class="zoomable sw" style="--i:3" src="images/with-you/bar-clean-4.webp" alt="Bar screen 4" loading="lazy" width="702" height="1250">
+          <img class="zoomable sw" style="--i:4" src="images/with-you/bar-clean-5.webp" alt="Bar screen 5" loading="lazy" width="702" height="1250">
+        </div>
+
+        <div class="stories stories--4">
+          <img class="zoomable" src="images/with-you/story-phone-1.webp" alt="Story: With You, for the quarterfinals" loading="lazy">
+          <img class="zoomable" src="images/with-you/story-phone-2.webp" alt="Story: With You" loading="lazy">
+          <img class="zoomable" src="images/with-you/story-phone-3.webp" alt="Story: In the U.S. and globally" loading="lazy">
+          <img class="zoomable" src="images/with-you/story-phone-4.webp" alt="Story: Linklaters, ball in the net" loading="lazy">
+        </div>
+
+        <hr>
+        <div class="pp-info">
+          <div class="muted">Event outcome</div>
+          <div>
+            <div class="outcome-rows" data-reveal>
+              <div class="outcome-row"><span class="outcome-num" data-count="46">46</span><span class="outcome-label">Design assets prepared</span></div>
+              <div class="outcome-row"><span class="outcome-num" data-count="152">152</span><span class="outcome-label">Clients</span></div>
+              <div class="outcome-row"><span class="outcome-num" data-count="67" data-suffix="%">67%</span><span class="outcome-label">Strategic clients</span></div>
+              <div class="outcome-row"><span class="outcome-num">PE fund</span><span class="outcome-label">New client</span></div>
+              <div class="outcome-row"><span class="outcome-num">Tech company</span><span class="outcome-label">New deal</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Closing mosaic: the campaign in one frame -->
+        <div class="tiles">
+          <figure class="mosaic-preview tile span-3" aria-label="Overview of the campaign">
+            <div class="mosaic-preview__grid" data-count="42" data-srcs="images/with-you/thumbs/event-screen-wall.webp,images/with-you/thumbs/col-photo-1.webp,images/with-you/thumbs/holding.webp,images/with-you/thumbs/event-lounge-sofa.webp,images/with-you/thumbs/bar-clean-2.webp,images/with-you/thumbs/story-phone-1.webp,images/with-you/thumbs/event-guests.webp,images/with-you/thumbs/nasdaq-tower.webp,images/with-you/thumbs/col-photo-3.webp,images/with-you/thumbs/event-merch.webp,images/with-you/thumbs/bar-clean-3.webp,images/with-you/thumbs/col-a-2.webp,images/with-you/thumbs/story-phone-3.webp,images/with-you/thumbs/event-goalkeeper.webp,images/with-you/thumbs/col-photo-4.webp,images/with-you/thumbs/photo-wall.webp,images/with-you/thumbs/event-lounge-columns.webp,images/with-you/thumbs/bar-clean-4.webp,images/with-you/thumbs/col-photo-2.webp,images/with-you/thumbs/feed-1.webp,images/with-you/thumbs/event-photo.webp,images/with-you/thumbs/event-lounge-screen.webp,images/with-you/thumbs/col-b-2.webp,images/with-you/thumbs/story-phone-4.webp,images/with-you/thumbs/col-a-4.webp,images/with-you/thumbs/bar-screens.webp,images/with-you/thumbs/col-photo-5.webp,images/with-you/thumbs/youtube.webp,images/with-you/thumbs/event-lounge-a.webp,images/with-you/thumbs/feed-2.webp,images/with-you/thumbs/banner.webp,images/with-you/thumbs/col-a-3.webp,images/with-you/thumbs/event-lounge-b.webp,images/with-you/thumbs/feed-3.webp,images/with-you/thumbs/story-phone-2.webp,images/with-you/thumbs/bar-clean-1.webp,images/with-you/thumbs/col-b-3.webp,images/with-you/thumbs/motion-cycle-poster.webp,images/with-you/thumbs/col-b-4.webp,images/with-you/thumbs/col-a-1.webp,images/with-you/thumbs/bar-clean-5.webp,images/with-you/thumbs/col-b-1.webp"></div>
+          </figure>
+        </div>
+
+        <hr>
+      </article>
+
+      <!-- Page 3 -->
+      <article class="project-page" data-slug="sydoria" data-title="Sydoria" hidden>
+        <hr>
+        <div class="head head--row">
+          <span>Sydoria<br><i>(E-commerce Website, UX/UI)</i><br>2023</span>
+          <a class="muted" href="#">(Close)</a>
+        </div>
+
+        <!-- Posters: the brand world first -->
+        <div class="poster-pair">
+          <figure class="tile">
+            <img class="zoomable" src="images/sydoria/poster-1.webp" alt="Sydoria poster: silver sigil on a pale blue arc" width="1190" height="1684">
+          </figure>
+          <figure class="tile">
+            <img class="zoomable" src="images/sydoria/poster-2.webp" alt="Sydoria poster: liquid silver earring on deep blue" width="1190" height="1684">
+          </figure>
+        </div>
+
+
+        <hr>
+        <div class="pp-info">
+          <div class="muted">Description</div>
+          <div class="pp-text">
+            <p>Sydoria is an emerging jewellery brand with a sculptural aesthetic and a distinctive visual language.
+              While discovering the brand through Instagram, I noticed that Sydoria didn’t have a dedicated website. I
+              decided to design a website concept that would translate the brand’s identity into a digital experience
+              and support its early-stage commercial growth.</p>
+          </div>
+        </div>
+
+        <hr>
+        <div class="pp-info">
+          <div class="muted">My role</div>
+          <div class="pp-text">
+            <p>UX/UI design, from competitive analysis and wireframes to the final concept, responsive design, UI kit
+              and interactive prototype. Three weeks, mentored by a senior designer at Uprock Studio.</p>
+          </div>
+        </div>
+
+        <hr>
+        <div class="pp-info">
+          <div class="muted">The challenge</div>
+          <div class="pp-text">
+            <p>Build credibility for a new premium brand with no press, retail or community, through visual quality and
+              social proof alone. Hold a fashion-aware, impulse-driven audience in a highly atmospheric space without
+              losing them before they reach product. Carry a strong brand world while still guiding users clearly
+              toward products and purchase.</p>
+          </div>
+        </div>
+
+        <!-- Hero: the site in motion -->
+        <div class="tiles">
+          <figure class="tile span-3 video-tile video-tile--wide" aria-label="Sydoria website, walkthrough">
+            <video src="images/sydoria/sydoria-reel.mp4" poster="images/sydoria/sydoria-reel-poster.webp"
+              muted loop playsinline preload="none"></video>
+          </figure>
+        </div>
+
+        <!-- 1. Holding attention -->
+        <hr>
+        <div class="pp-info" id="syd-1">
+          <div class="muted"><sup class="ux-num">1</sup> Holding attention</div>
+          <div class="pp-text">
+            <p>The homepage opens with a visually driven hero and no immediate call to action. CTA placement is
+              intentionally delayed so users absorb the brand’s identity and emotional tone before being asked to act,
+              which reduces early friction and emotional drop-off.</p>
+          </div>
+        </div>
+        <!-- Mobile homepage, straight on the page background -->
+        <div class="phones">
+          <img class="zoomable" src="images/sydoria/iphone-1.webp" alt="Mobile hero" loading="lazy">
+          <img class="zoomable" src="images/sydoria/iphone-2.webp" alt="Mobile: Sydoria World" loading="lazy">
+          <img class="zoomable" src="images/sydoria/iphone-3.webp" alt="Mobile: social media" loading="lazy">
+        </div>
+
+        <!-- 2. Sydoria World -->
+        <hr>
+        <div class="pp-info" id="syd-2">
+          <div class="muted"><sup class="ux-num">2</sup> Sydoria World</div>
+          <div class="pp-text">
+            <p>The site introduces a curated brand narrative, while clear entry points to products (Shop / New) are
+              always visible. Users can either explore the brand world or shortcut directly to products based on their
+              intent.</p>
+          </div>
+        </div>
+        <div class="tiles">
+          <figure class="tile span-3">
+            <img class="zoomable" src="images/sydoria/frame-categories.webp" data-full="images/sydoria/frame-categories-full.webp" alt="Category menu: All, Earrings, Necklaces, Bracelets, Rings" loading="lazy" width="1400" height="1104">
+          </figure>
+        </div>
+
+        <!-- 3. Trust -->
+        <hr>
+        <div class="pp-info" id="syd-3">
+          <div class="muted"><sup class="ux-num">3</sup> Building trust</div>
+          <div class="pp-text">
+            <p>Social validation comes through user-generated content and Instagram integrations featuring fashion
+              insiders and creatives. For a new brand, an Instagram feed on the homepage is accessible, credible proof
+              that established brands achieve through years of press and retail presence.</p>
+          </div>
+        </div>
+
+        <!-- 4. Buying on feeling -->
+        <hr>
+        <div class="pp-info" id="syd-4">
+          <div class="muted"><sup class="ux-num">4</sup> Buying on feeling</div>
+          <div class="pp-text">
+            <p>Filtering is intentionally minimal, only category and colour: this audience browses by feel, not
+              specification. The product page adds per-product video alongside editorial photography, addressing the
+              tactile gap jewellery shoppers face when they can’t handle a piece.</p>
+          </div>
+        </div>
+        <!-- 3D earring: spins on its own, a fast swipe across it gives it a sharp turn. Logic: sydoria-3d.js -->
+        <div class="tiles">
+          <figure class="tile span-3">
+            <div class="cat3d cat3d--solo" data-cat3d aria-label="Sydoria earring in 3D">
+              <div class="cat3d__stage" aria-hidden="true"></div>
+            </div>
+          </figure>
+        </div>
+        <div class="tiles">
+          <figure class="tile span-3">
+            <img class="zoomable" src="images/sydoria/frame-shop.webp" data-full="images/sydoria/frame-shop-full.webp" alt="Shop page: products mixed with editorial photography" loading="lazy" width="1400" height="2372">
+          </figure>
+        </div>
+        <!-- Mobile catalogue and product page, scrolling, on the page background -->
+        <div class="phones phones--2">
+          <figure class="scroller scroller--phone" style="--ratio: 9 / 19" aria-label="Catalogue on mobile, scrolling">
+            <img src="images/sydoria/catalog-mobile.webp" alt="Catalogue page, mobile" loading="lazy">
+          </figure>
+          <figure class="scroller scroller--phone" style="--ratio: 9 / 19" aria-label="Product page on mobile, scrolling">
+            <img src="images/sydoria/product-mobile.webp" alt="Product page, mobile" loading="lazy">
+          </figure>
+        </div>
+        <div class="tiles">
+          <figure class="tile span-3">
+            <img class="zoomable" src="images/sydoria/frame-product-mobile.webp" data-full="images/sydoria/frame-product-mobile-full.webp" alt="Mobile product page: photo, video and price" loading="lazy" width="1400" height="919">
+          </figure>
+        </div>
+
+        <hr>
+        <div class="pp-info">
+          <div class="muted">What I delivered</div>
+          <div>
+            <div class="outcome-rows" data-reveal>
+              <div class="outcome-row"><span class="outcome-num" data-count="3">3</span><span class="outcome-label">Weeks</span></div>
+              <div class="outcome-row"><span class="outcome-num" data-count="16">16</span><span class="outcome-label">Responsive screens</span></div>
+              <div class="outcome-row"><span class="outcome-num">UI kit</span><span class="outcome-label">17 UI components · 2 fonts · 1 main colour</span></div>
+              <div class="outcome-row"><span class="outcome-num">Prototype</span><span class="outcome-label">Interactive</span></div>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+        <div class="pp-info">
+          <div class="muted">What I’d do differently</div>
+          <div class="pp-text pp-text--spaced">
+            <p>Ground the audience profile in real research. Show the alternatives, not just the outcome. Define
+              success metrics upfront. Strengthen trust at the product level. Add sustainability messaging in V2.</p>
+          </div>
+        </div>
+
+        <!-- Closing mosaic: the brand world, the frames and the site in one view -->
+        <div class="tiles">
+          <figure class="mosaic-preview tile span-3" aria-label="Overview of the project">
+            <div class="mosaic-preview__grid" data-count="42" data-srcs="images/sydoria/mosaic/ui-woman-1.webp,images/sydoria/mosaic/poster-1-1.webp,images/sydoria/mosaic/shop-1.webp,images/sydoria/mosaic/tropical-2.webp,images/sydoria/mosaic/ui-woman-2.webp,images/sydoria/mosaic/poster-1-2.webp,images/sydoria/mosaic/reel-product-1.webp,images/sydoria/mosaic/earrings-1.webp,images/sydoria/mosaic/poster-2-2.webp,images/sydoria/mosaic/categories-2.webp,images/sydoria/mosaic/product-mobile-1.webp,images/sydoria/mosaic/tropical-1.webp,images/sydoria/mosaic/ui-woman-3.webp,images/sydoria/mosaic/shop-2.webp,images/sydoria/mosaic/reel-cat-1.webp,images/sydoria/mosaic/photo-profile-1.webp,images/sydoria/mosaic/categories-1.webp,images/sydoria/mosaic/earrings-3.webp,images/sydoria/mosaic/ui-eyes-2.webp,images/sydoria/mosaic/ui-man-2.webp,images/sydoria/mosaic/ui-eyes-1.webp,images/sydoria/mosaic/earrings-2.webp,images/sydoria/mosaic/reel-hero-1.webp,images/sydoria/mosaic/wordmark-1.webp,images/sydoria/mosaic/ui-man-1.webp,images/sydoria/mosaic/tropical-3.webp,images/sydoria/mosaic/photo-profile-2.webp,images/sydoria/mosaic/product-mobile-2.webp,images/sydoria/mosaic/poster-2-1.webp,images/sydoria/mosaic/shop-4.webp,images/sydoria/mosaic/reel-product-1.webp,images/sydoria/mosaic/earrings-1.webp,images/sydoria/mosaic/product-mobile-1.webp,images/sydoria/mosaic/ui-man-2.webp,images/sydoria/mosaic/ui-woman-2.webp,images/sydoria/mosaic/categories-2.webp,images/sydoria/mosaic/earrings-2.webp,images/sydoria/mosaic/reel-cat-1.webp,images/sydoria/mosaic/poster-1-1.webp,images/sydoria/mosaic/earrings-3.webp,images/sydoria/mosaic/tropical-2.webp,images/sydoria/mosaic/ui-woman-3.webp"></div>
+          </figure>
+        </div>
+
+        <hr>
+      </article>
+
+    </main>
+
+    <!-- ============ RIGHT: CV ============ -->
+    <section class="col col--right" id="cv">
+      <hr>
+      <div class="head"><span data-intro>CV</span></div>
+
+      <hr>
+      <div class="cv-row">
+        <div>Employment</div>
+        <div>
+          <div class="cv-job">
+            <p>
+              Creative Designer<br>
+              Linklaters<br>
+              2024 – now
+            </p>
+            <ul class="cv-list">
+              <li>Design reports, brochures, presentations, newsletters, campaign and event materials across print and
+                digital</li>
+              <li>~320 jobs since February 2026, switching between briefs daily</li>
+              <li>Helped refresh the Linklaters brand and built 17 templates, used across 9 BD teams and 4 sectors</li>
+              <li>Designed and animated the visuals for the firm’s World Cup 2026 quarter-final watch party at Nasdaq
+                MarketSite, New York</li>
+              <li>Develop AI-assisted InDesign scripts that turn Word content into branded layouts</li>
+            </ul>
+          </div>
+
+          <div class="cv-job">
+            <p>
+              Pitch Designer<br>
+              Linklaters<br>
+              2022 – 2024
+            </p>
+            <ul class="cv-list">
+              <li>Designed client-facing pitch decks, presentations and proposal materials in PowerPoint for business
+                development and client meetings</li>
+              <li>Translated complex legal and business content into clear, structured visual narratives</li>
+              <li>Worked directly with lawyers, BD teams and senior stakeholders on content, story and visuals, under
+                tight deadlines</li>
+            </ul>
+          </div>
+
+          <div class="cv-job">
+            <p>
+              UX/UI Internship<br>
+              Uprock<br>
+              2023
+            </p>
+            <ul class="cv-list">
+              <li>Designed Sydoria — website for a jewellery store (14 screens, a 17-component UI kit, interactive prototype)</li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+      <div class="cv-row">
+        <div>Education</div>
+        <div>
+          <p>
+            MBA<br>
+            SGH Warsaw School of Economics<br>
+            2022 – ongoing
+          </p>
+          BA in Arts<br>
+          Université Jean Moulin Lyon 3<br>
+          2020
+          </p>
+          BA in Romance Philology (French)<br>
+          University of Gdańsk<br>
+          2017 – 2020
+          </p>
+        </div>
+      </div>
+
+      <hr>
+      <div class="cv-row">
+        <div>Focus</div>
+        <div>
+          <p>
+            Brand systems<br>
+            Presentation design<br>
+            Template libraries<br>
+            AI automation<br>
+            Motion design<br>
+            Print and screen production
+          </p>
+        </div>
+      </div>
+
+      <hr>
+      <div class="cv-row">
+        <div>Tools</div>
+        <div>
+          <p>
+            InDesign<br>
+            Illustrator<br>
+            Figma<br>
+            PowerPoint<br>
+            Flora<br>
+            Claude<br>
+            Midjourney<br>
+          </p>
+        </div>
+      </div>
+
+      <hr>
+    </section>
+
+  </div>
+
+  <!-- Full-screen image view (click an image in a project gallery) -->
+  <div class="lightbox" hidden><img alt=""></div>
+
+  <script src="script.js"></script>
+  <!-- three.js for the Sydoria 3D earring (loaded on demand by sydoria-3d.js) -->
+  <script type="importmap">
+    { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    } }
+  </script>
+  <script type="module" src="sydoria-3d.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+# Only the built site goes to GitHub. Sources, notes and originals stay local.
+.DS_Store
+.claude/
+HANDOFF.md
+download.png
+
+# Paid font files: licence does not allow public hosting
+fonts/*.ttf
+fonts/*.otf
+fonts/*.woff
+fonts/*.woff2
+
+# Source exports and originals (the site uses the WebP / MP4 versions)
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.pptx
+*.key
+*.psd
+*.ai
+*.fig
+images/with you/
+**/src/
+images/sydoria/CwQSAQw1ft-GfurTd_MuwQ.mp4

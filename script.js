@@ -475,7 +475,7 @@ document.addEventListener('keydown', (e) => {
 // ------------------------------------------------------------------
 // Videos in project pages: play while on screen, pause otherwise
 // ------------------------------------------------------------------
-document.querySelectorAll('.project-page video').forEach((v) => {
+document.querySelectorAll('.project-page video, .motion video, .ai-section video').forEach((v) => {
   if (reduceMotion || !('IntersectionObserver' in window)) { v.controls = true; return; }
   new IntersectionObserver(([e]) => {
     if (e.isIntersecting) { v.play().catch(() => {}); } else { v.pause(); }

@@ -23,3 +23,6 @@ fonts/*.woff2
 images/with you/
 **/src/
 images/sydoria/CwQSAQw1ft-GfurTd_MuwQ.mp4
+
+# Source GIF originals (the site uses the MP4 version)
+*.gif

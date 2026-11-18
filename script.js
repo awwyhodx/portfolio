@@ -12,9 +12,7 @@ async function playIntro() {
   const mobile = window.matchMedia('(max-width: 767px)').matches;
   const selector = mobile ? '#top[data-intro], [data-intro-mobile]' : '[data-intro]';
   const targets = [...document.querySelectorAll(selector)]
-    .filter((el) => el.getBoundingClientRect().width > 0)
-    // CONTACT closes the row (it sits higher in the page than PROJECTS and CV)
-    .sort((a, b) => a.hasAttribute('data-intro-last') - b.hasAttribute('data-intro-last'));
+    .filter((el) => el.getBoundingClientRect().width > 0);
 
   // Copies of the labels, placed exactly where the real ones are
   const clones = targets.map((el) => {

@@ -196,6 +196,7 @@ a.muted:hover { color: var(--text); opacity: 1; }
 }
 .pp-text p { margin: 0; }
 .pp-text p + p { text-indent: 4ch; }
+.pp-text p.no-indent { text-indent: 0; }   /* starts flush under the paragraph above */
 
 .pp-label { margin-top: calc(var(--line) * 3); }
 
@@ -972,14 +973,16 @@ a.muted:hover { color: var(--text); opacity: 1; }
 .phones--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); width: 66.6%; margin-inline: auto; }
 .phones--2 .scroller { width: 72%; margin: 0 auto; }
 
-/* Two posters side by side at the top of the case */
-.poster-pair {
+/* Two images side by side (Sydoria posters, With You venue photos) */
+.poster-pair,
+.duo {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.5rem;
   margin: calc(var(--line) * 2) 0;
 }
-.poster-pair img { display: block; width: 100%; height: auto; cursor: zoom-in; }
+.poster-pair img,
+.duo img { display: block; width: 100%; height: auto; cursor: zoom-in; }
 
 /* Wide (16:9) video tile */
 .video-tile--wide video { aspect-ratio: 16 / 9; }
